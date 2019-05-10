@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Kah Geh Tan",
+    "classifications": [
+        "Worker"
+    ],
+    "identity": "10kg.WorkerProcessTemplate.CSharp",
+    "name": "10kg Worker Process Template",
+    "shortName": "10kgwp",
+    "preferNameDirectory": true,
+    "sourceName": "WorkerProcess.Template",
+    "postActions": [
+        {
+            "condition": "(OS != \"Windows_NT\")",
+            "description": "Make scripts executable",
+            "manualInstructions": [
+                {
+                    "text": "Run 'chmod +x *.ps1'"
+                }
+            ],
+            "actionId": "cb9a6cf3-4f5c-4860-b9d2-03a574959774",
+            "args": {
+                "+x": "*.ps1"
+            },
+            "continueOnError": true
+        }
+    ]
+}
